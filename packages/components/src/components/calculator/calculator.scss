@@ -1,0 +1,66 @@
+// [AI]
+.dc-calculator {
+    background-color: var(--general-main-1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 320px;
+    overflow: hidden;
+    padding: 16px;
+    width: 100%;
+
+    &__display {
+        background-color: var(--general-main-2);
+        border-radius: 4px;
+        color: var(--text-general);
+        font-size: 2rem;
+        font-weight: bold;
+        height: 64px;
+        line-height: 64px;
+        margin-bottom: 16px;
+        overflow: hidden;
+        padding: 0 16px;
+        text-align: right;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__keypad {
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__keypad-row {
+        display: contents;
+    }
+
+    &__key {
+        border-radius: 4px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        height: 56px;
+        min-width: 56px;
+        padding: 0;
+        width: 100%;
+
+        &--operator {
+            background-color: var(--brand-orange);
+            color: var(--text-colored-background);
+        }
+
+        &--clear {
+            background-color: var(--status-warning);
+            color: var(--text-colored-background);
+        }
+
+        &--equals {
+            background-color: var(--brand-secondary);
+        }
+
+        &--zero {
+            grid-column: span 2;
+        }
+    }
+}
+// [/AI]
